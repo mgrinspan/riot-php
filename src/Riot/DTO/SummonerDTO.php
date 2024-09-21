@@ -12,8 +12,6 @@ final class SummonerDTO implements DTOInterface
 
     private int $revisionDate;
 
-    private string $name;
-
     private string $id;
 
     private string $puuid;
@@ -24,7 +22,6 @@ final class SummonerDTO implements DTOInterface
         string $accountId,
         int $profileIconId,
         int $revisionDate,
-        string $name,
         string $id,
         string $puuid,
         int $summonerLevel
@@ -32,7 +29,6 @@ final class SummonerDTO implements DTOInterface
         $this->accountId = $accountId;
         $this->profileIconId = $profileIconId;
         $this->revisionDate = $revisionDate;
-        $this->name = $name;
         $this->id = $id;
         $this->puuid = $puuid;
         $this->summonerLevel = $summonerLevel;
@@ -51,11 +47,6 @@ final class SummonerDTO implements DTOInterface
     public function getRevisionDate(): int
     {
         return $this->revisionDate;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
     }
 
     public function getId(): string
@@ -82,7 +73,6 @@ final class SummonerDTO implements DTOInterface
             $data['accountId'],
             $data['profileIconId'],
             $data['revisionDate'],
-            $data['name'],
             $data['id'],
             $data['puuid'],
             $data['summonerLevel'],
